@@ -86,7 +86,8 @@
   <!-- TODO: Replace with your paper title and authors -->
   <title>Spatial Causal Prediction in Video | Yanguang Zhao et al.</title>
   
-  <!-- Favicon removed -->
+  <!-- Disable favicon explicitly to avoid browser cache showing old icon -->
+  <link rel="icon" href="data:,">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -345,11 +346,15 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>National University of Singapore,</span>
-              <span class="author-block"><sup>2</sup>Shenzhen University,</span>
-              <span class="author-block"><sup>3</sup>Sichuan University,</span>
-              <span class="author-block"><sup>4</sup>National Tsing Hua University</span>
-              <span class="author-block"><br>CVPR Findings 2026</span>
+              <div>
+                <span class="author-block"><sup>1</sup>National University of Singapore,</span>
+                <span class="author-block"><sup>2</sup>Shenzhen University</span>
+              </div>
+              <div>
+                <span class="author-block"><sup>3</sup>Sichuan University,</span>
+                <span class="author-block"><sup>4</sup>National Tsing Hua University</span>
+              </div>
+              <div>CVPR Findings 2026</div>
             </div>
 
                   <div class="column has-text-centered">
