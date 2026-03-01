@@ -749,5 +749,82 @@ a:focus {
   }
 }
 
+/* SCP table styling */
+.scp-table-section {
+  background: #ffffff;
+}
+
+.scp-table-caption {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  text-align: center;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.scp-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d6deeb;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+}
+
+.scp-results-table {
+  width: 100%;
+  min-width: 1320px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.scp-results-table th,
+.scp-results-table td {
+  border: 1px solid #dfe6f2;
+  padding: 0.5rem 0.55rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.scp-results-table th:first-child,
+.scp-results-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+.scp-results-table thead th {
+  background: #f8fbff;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.scp-results-table .avg-col {
+  background: #d7eaff;
+  font-weight: 700;
+}
+
+.scp-results-table .deep-cell {
+  background: #1f4e8c !important;
+  color: #ffffff;
+}
+
+.scp-results-table .group-row td {
+  background: #ececec !important;
+  text-align: center;
+  font-weight: 700;
+  color: #334155;
+}
+
+.scp-results-table tbody tr:nth-child(even):not(.group-row) td {
+  background: #f6f8fb;
+}
+
+.boxed-best {
+  display: inline-block;
+  border: 2px solid #1f2937;
+  border-radius: 4px;
+  padding: 0.05rem 0.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
 
 
