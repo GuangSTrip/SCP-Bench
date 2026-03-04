@@ -848,9 +848,9 @@ a:focus {
 
 .figure-grid-two .image {
   margin: 0;
-  display: grid;
-  grid-template-rows: auto auto;
-  align-content: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .figure-grid-two .image img {
