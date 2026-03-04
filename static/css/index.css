@@ -82,6 +82,19 @@ body {
   margin: 8px 4px;
 }
 
+.publication-links {
+  margin-top: -0.55rem;
+}
+
+.arxiv-btn {
+  font-size: 0.84rem !important;
+  padding: 0.26rem 0.72rem !important;
+}
+
+.arxiv-btn .icon {
+  font-size: 0.82rem !important;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
@@ -828,6 +841,29 @@ a:focus {
 
 .scp-results-table td:not(:first-child) {
   font-variant-numeric: tabular-nums;
+}
+
+.benchmark-compare-table .benchmark-placeholder {
+  text-align: center !important;
+  color: #475569;
+  font-style: italic;
+  background: #ffffff !important;
+  padding: 0.9rem 0.7rem;
+}
+
+.benchmark-compare-table th:first-child,
+.benchmark-compare-table td:first-child {
+  width: 20%;
+}
+
+.benchmark-compare-table .undeclared-cell {
+  background: rgb(234, 234, 234) !important;
+  color: #64748b;
+  text-align: center !important;
+}
+
+.benchmark-compare-table .ours-row td {
+  background: rgb(232, 240, 255) !important;
 }
 
 .boxed-best {

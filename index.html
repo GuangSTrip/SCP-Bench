@@ -350,7 +350,7 @@
                   <!-- TODO: Update with your arXiv paper ID -->
                   <span class="link-block">
                     <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
+                      class="external-link button is-normal is-rounded is-dark arxiv-btn">
                       <span class="icon">
                         <i class="ai ai-arxiv"></i>
                       </span>
@@ -426,6 +426,198 @@
       </div>
     </section>
     <!-- End paper abstract -->
+
+    <!-- Comparison with spatial reasoning benchmarks -->
+    <section class="section scp-table-section">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered" id="comparison-with-spatial-reasoning-benchmarks">Comparison with spatial reasoning benchmarks</h2>
+        <p class="scp-table-caption">
+          Comparison with existing benchmarks. <code>Modality</code> denotes the input type. <code>Dynamic/Static</code> indicates whether the scene content itself undergoes temporal changes, rather than mere camera movement. <code>View Type</code> specifies whether the questions involve single or multiple viewpoints. <code>Perspective</code> denotes whether the benchmark includes explicitly designed ego (first-person) and exo (third-person) perspective settings. <code>Causal Reasoning</code> indicates whether the benchmark requires inferring outcomes or states driven by causal dependencies. <code>Seen/Unseen</code> reflects whether the queried information is directly observable within the given visual content.
+        </p>
+        <div class="scp-table-wrap">
+          <table class="scp-results-table benchmark-compare-table">
+            <thead>
+              <tr>
+                <th>Benchmark</th>
+                <th>QA pairs</th>
+                <th>Modality</th>
+                <th>Dynamic/Static</th>
+                <th colspan="2">View Type</th>
+                <th colspan="2">Perspective</th>
+                <th>Causal Reasoning</th>
+                <th>Seen/Unseen</th>
+              </tr>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Single</th>
+                <th>Multi</th>
+                <th>Ego</th>
+                <th>Exo</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3DSRBench</td>
+                <td>3,772</td>
+                <td>Image</td>
+                <td>Static</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>InternSpatial-Bench</td>
+                <td>6,008</td>
+                <td>Image</td>
+                <td>Static</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>OmniSpatial</td>
+                <td>~8,400</td>
+                <td>Image</td>
+                <td>Static</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>Spatial457</td>
+                <td>23,752</td>
+                <td>Image</td>
+                <td>Static</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td class="undeclared-cell" colspan="2"><em>Undeclared</em></td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>All-Angles Bench</td>
+                <td>~2,100</td>
+                <td>Image</td>
+                <td>Static</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td class="undeclared-cell" colspan="2"><em>Undeclared</em></td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>EmbSpatial-Bench</td>
+                <td>3,640</td>
+                <td>Image</td>
+                <td>Static</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>MMSI-Bench</td>
+                <td>1,000</td>
+                <td>Image</td>
+                <td>Static</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td class="undeclared-cell" colspan="2"><em>Undeclared</em></td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>MindCube</td>
+                <td>21,154</td>
+                <td>Image</td>
+                <td>Static</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td class="undeclared-cell" colspan="2"><em>Undeclared</em></td>
+                <td>&#10007;</td>
+                <td>Unseen</td>
+              </tr>
+              <tr>
+                <td>VSI-Bench</td>
+                <td>5,130</td>
+                <td>Video</td>
+                <td>Static</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>VLM4D</td>
+                <td>~1,800</td>
+                <td>Video</td>
+                <td>Dynamic</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>STI-Bench</td>
+                <td>2,064</td>
+                <td>Video</td>
+                <td>Dynamic</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr>
+                <td>DSI-Bench</td>
+                <td>~1,700</td>
+                <td>Video</td>
+                <td>Dynamic</td>
+                <td>&#10003;</td>
+                <td>&#10007;</td>
+                <td class="undeclared-cell" colspan="2"><em>Undeclared</em></td>
+                <td>&#10007;</td>
+                <td>Seen</td>
+              </tr>
+              <tr class="ours-row">
+                <td><strong>SCP-Bench (Ours)</strong></td>
+                <td><strong>2,500</strong></td>
+                <td><strong>Video</strong></td>
+                <td><strong>Dynamic</strong></td>
+                <td><strong>&#10003;</strong></td>
+                <td><strong>&#10003;</strong></td>
+                <td><strong>&#10003;</strong></td>
+                <td><strong>&#10003;</strong></td>
+                <td><strong>&#10003;</strong></td>
+                <td><strong>Unseen</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- End benchmark comparison -->
 
     <!-- Spatial Causal Prediction and Construction Pipeline -->
     <section class="section">
