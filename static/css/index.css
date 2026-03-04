@@ -841,17 +841,27 @@ a:focus {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  align-items: start;
+  align-items: stretch;
   max-width: 1100px;
   margin: 0.8rem auto 1rem;
 }
 
 .figure-grid-two .image {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.figure-grid-two .image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .figure-note {
-  margin-top: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.35rem;
   margin-bottom: 0;
   text-align: center;
   font-size: 0.76rem;
