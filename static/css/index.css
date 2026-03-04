@@ -755,76 +755,94 @@ a:focus {
 }
 
 .scp-table-caption {
-  max-width: 1100px;
+  max-width: 980px;
   margin: 0 auto 1rem;
   text-align: center;
-  color: rgb(78, 146, 222);
-  font-size: 0.95rem;
+  color: rgb(60, 94, 146);
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .scp-table-wrap {
-  overflow-x: auto;
-  border: 1px solid rgb(219, 222, 255);
-  border-radius: 10px;
+  overflow-x: visible;
+  border: 1px solid rgb(215, 222, 237);
+  border-radius: 8px;
   box-shadow: var(--shadow-sm);
   background: #ffffff;
 }
 
 .scp-results-table {
   width: 100%;
-  min-width: 1320px;
+  min-width: 0;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  table-layout: fixed;
+  font-size: 0.74rem;
 }
 
 .scp-results-table th,
 .scp-results-table td {
-  border: 1px solid rgb(219, 222, 255);
-  padding: 0.5rem 0.55rem;
+  border: 1px solid rgb(224, 228, 238);
+  padding: 0.32rem 0.3rem;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
 }
 
 .scp-results-table th:first-child,
 .scp-results-table td:first-child {
   text-align: left;
   font-weight: 600;
+  width: 24%;
 }
 
 .scp-results-table thead th {
-  background: rgb(230, 243, 255);
-  color: rgb(78, 146, 222);
+  background: rgb(239, 245, 255);
+  color: rgb(57, 90, 138);
   font-weight: 700;
 }
 
 .scp-results-table .avg-col {
-  background: rgb(232, 240, 255);
+  background: rgb(228, 237, 251);
   font-weight: 700;
 }
 
 .scp-results-table .deep-cell {
-  background: rgb(160, 190, 255) !important;
-  color: #0f172a;
+  background: rgb(177, 199, 242) !important;
+  color: #0f1e38;
 }
 
 .scp-results-table .group-row td {
-  background: rgb(234, 234, 234) !important;
+  background: rgb(239, 241, 245) !important;
   text-align: center;
   font-weight: 700;
-  color: rgb(78, 146, 222);
+  color: rgb(70, 93, 127);
 }
 
 .scp-results-table tbody tr:nth-child(even):not(.group-row) td {
-  background: rgb(255, 251, 216);
+  background: rgb(250, 252, 255);
+}
+
+.scp-results-table td:not(:first-child) {
+  font-variant-numeric: tabular-nums;
 }
 
 .boxed-best {
   display: inline-block;
-  border: 2px solid rgb(31, 229, 113);
+  border: 1.5px solid rgb(89, 189, 126);
   border-radius: 4px;
-  padding: 0.05rem 0.25rem;
+  padding: 0.02rem 0.16rem;
   font-weight: 700;
   line-height: 1.1;
   background: #ffffff;
 }
 
+@media screen and (max-width: 1200px) {
+  .scp-table-wrap {
+    overflow-x: auto;
+  }
+
+  .scp-results-table {
+    min-width: 1000px;
+  }
+}
