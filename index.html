@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
   <meta name="title" content="Spatial Causal Prediction in Video">
@@ -12,10 +13,11 @@
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
   <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
   <!-- TODO: List all authors -->
-  <meta name="author" content="Yanguang Zhao, Jie Yang, Shengqiong Wu, Shutong Hu, Hongbo Qiu, Yu Wang, Guijia Zhang, Kaizhe Chen, Hao Fei, Chia-Wen Lin, Mong-Li Lee, Wynne Hsu">
+  <meta name="author"
+    content="Yanguang Zhao, Jie Yang, Shengqiong Wu, Shutong Hu, Hongbo Qiu, Yu Wang, Guijia Zhang, Kaizhe Chen, Hao Fei, Chia-Wen Lin, Mong-Li Lee, Wynne Hsu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <!-- TODO: Replace with your institution or lab name -->
@@ -68,13 +70,13 @@
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="CVPR Findings">
   <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,20 +87,23 @@
 
   <!-- TODO: Replace with your paper title and authors -->
   <title>Spatial Causal Prediction in Video | Yanguang Zhao et al.</title>
-  
+
   <!-- Disable favicon explicitly to avoid browser cache showing old icon -->
   <link rel="icon" href="data:,">
-  
+
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
+
   <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
@@ -106,10 +111,10 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -117,7 +122,7 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
@@ -251,7 +256,7 @@
     ]
   }
   </script>
-  
+
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
@@ -266,6 +271,7 @@
   }
   </script>
 </head>
+
 <body>
 
 
@@ -275,43 +281,49 @@
   </button>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Spatial Causal Prediction in Video</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><a href="https://scholar.google.com/citations?user=22p-FwoAAAAJ&hl=en" target="_blank">Yanguang Zhao</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="https://1114531938.github.io/homepage/" target="_blank">Jie Yang</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="https://sqwu.top" target="_blank">Shengqiong Wu</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="./" target="_blank">Shutong Hu</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="./" target="_blank">Hongbo Qiu</a><sup>2</sup>,</span>
-              <span class="author-block"><a href="./" target="_blank">Yu Wang</a><sup>3</sup>,</span>
-              <span class="author-block"><a href="./" target="_blank">Guijia Zhang</a><sup>2</sup>,</span>
-              <span class="author-block"><a href="./" target="_blank">Kaizhe Chen</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="https://haofei.vip" target="_blank">Hao Fei</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="https://www.ee.nthu.edu.tw/cwlin/" target="_blank">Chia-Wen Lin</a><sup>4</sup>,</span>
-              <span class="author-block"><a href="https://www.comp.nus.edu.sg/~leeml/" target="_blank">Mong-Li Lee</a><sup>1</sup>,</span>
-              <span class="author-block"><a href="https://www.comp.nus.edu.sg/~whsu/" target="_blank">Wynne Hsu</a><sup>1</sup></span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <div>
-                <span class="author-block"><sup>1</sup>National University of Singapore,</span>
-                <span class="author-block"><sup>2</sup>Shenzhen University</span>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <!-- TODO: Replace with your paper title -->
+              <h1 class="title is-1 publication-title">Spatial Causal Prediction in Video</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="https://scholar.google.com/citations?user=22p-FwoAAAAJ&hl=en"
+                    target="_blank">Yanguang Zhao</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="https://1114531938.github.io/homepage/" target="_blank">Jie
+                    Yang</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="https://sqwu.top" target="_blank">Shengqiong
+                    Wu</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="./" target="_blank">Shutong Hu</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="./" target="_blank">Hongbo Qiu</a><sup>2</sup>,</span>
+                <span class="author-block"><a href="./" target="_blank">Yu Wang</a><sup>3</sup>,</span>
+                <span class="author-block"><a href="./" target="_blank">Guijia Zhang</a><sup>2</sup>,</span>
+                <span class="author-block"><a href="./" target="_blank">Kaizhe Chen</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="https://haofei.vip" target="_blank">Hao Fei</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="https://www.ee.nthu.edu.tw/cwlin/" target="_blank">Chia-Wen
+                    Lin</a><sup>4</sup>,</span>
+                <span class="author-block"><a href="https://www.comp.nus.edu.sg/~leeml/" target="_blank">Mong-Li
+                    Lee</a><sup>1</sup>,</span>
+                <span class="author-block"><a href="https://www.comp.nus.edu.sg/~whsu/" target="_blank">Wynne
+                    Hsu</a><sup>1</sup></span>
               </div>
-              <div>
-                <span class="author-block"><sup>3</sup>Sichuan University,</span>
-                <span class="author-block"><sup>4</sup>National Tsing Hua University</span>
-              </div>
-              <div>CVPR Findings 2026</div>
-            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      <!--
+              <div class="is-size-5 publication-authors">
+                <div>
+                  <span class="author-block"><sup>1</sup>National University of Singapore,</span>
+                  <span class="author-block"><sup>2</sup>Shenzhen University</span>
+                </div>
+                <div>
+                  <span class="author-block"><sup>3</sup>Sichuan University,</span>
+                  <span class="author-block"><sup>4</sup>National Tsing Hua University</span>
+                </div>
+                <div>CVPR Findings 2026</div>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!--
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -323,7 +335,7 @@
                     </span>
                       -->
 
-                    <!--
+                  <!--
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -335,359 +347,600 @@
                   </span>
                     -->
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                  <!-- TODO: Update with your arXiv paper ID -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code (Coming Soon)</span>
-                  </a>
-                </span>
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code (Coming Soon)</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
-<!-- Intro and case figures under title -->
-<section class="section">
-  <div class="container is-max-widescreen">
-    <div class="columns is-vcentered is-variable is-5">
-      <div class="column is-4-desktop is-5-tablet">
-        <figure class="image" style="max-width: 360px; margin: 0 auto;">
-          <img src="static/images/intro6.png" alt="Intro figure" loading="lazy" style="display: block; width: 100%; height: auto;">
-        </figure>
-      </div>
-      <div class="column is-8-desktop is-7-tablet">
-        <figure class="image" style="max-width: 1000px; margin: 0 auto;">
-          <img src="static/images/case_v8_cropped.png" alt="Case figure" loading="lazy" style="display: block; width: 100%; height: auto;">
-        </figure>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End intro and case figures -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Spatial reasoning, the ability to understand spatial relations, causality, and dynamic evolution, is central to human intelligence and essential for real-world applications such as autonomous driving and robotics. Existing studies, however, primarily assess models on visible spatio-temporal understanding, overlooking their ability to infer unseen past or future spatial states. In this work, we introduce <strong>Spatial Causal Prediction (SCP)</strong>, a new task paradigm that challenges models to reason beyond observation and predict spatial causal outcomes. We further construct <strong>SCP-Bench</strong>, a benchmark comprising 2,500 QA pairs across 1,181 videos spanning diverse viewpoints, scenes, and causal directions, to support systematic evaluation. Through comprehensive experiments on 23 state-of-the-art models, we reveal substantial gaps between human and model performance, limited temporal extrapolation, and weak causal grounding. We further analyze key factors influencing performance and propose perception-enhancement and reasoning-guided strategies toward advancing spatial causal intelligence.
-          </p>
+    <!-- Intro and case figures under title -->
+    <section class="section">
+      <div class="container is-max-widescreen">
+        <div class="columns is-vcentered is-variable is-5">
+          <div class="column is-4-desktop is-5-tablet">
+            <figure class="image" style="max-width: 360px; margin: 0 auto;">
+              <img src="static/images/intro6.png" alt="Intro figure" loading="lazy"
+                style="display: block; width: 100%; height: auto;">
+            </figure>
+          </div>
+          <div class="column is-8-desktop is-7-tablet">
+            <figure class="image" style="max-width: 1000px; margin: 0 auto;">
+              <img src="static/images/case_v8_cropped.png" alt="Case figure" loading="lazy"
+                style="display: block; width: 100%; height: auto;">
+            </figure>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
+    <!-- End intro and case figures -->
 
-<!-- Spatial Causal Prediction and Construction Pipeline -->
-<section class="section">
-  <div class="container is-max-widescreen">
-    <h2 class="title is-3 has-text-centered">Construction Pipeline</h2>
-    <figure class="image" style="max-width: 1000px; margin: 0 auto;">
-      <img src="static/images/construction_pipeline_v5.png" alt="Construction pipeline figure" loading="lazy" style="display: block; width: 100%; height: auto;">
-    </figure>
-  </div>
-</section>
-<!-- End spatial causal prediction and construction pipeline -->
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <!-- TODO: Replace with your paper abstract -->
+              <p>
+                Spatial reasoning, the ability to understand spatial relations, causality, and dynamic evolution, is
+                central to human intelligence and essential for real-world applications such as autonomous driving and
+                robotics. Existing studies, however, primarily assess models on visible spatio-temporal understanding,
+                overlooking their ability to infer unseen past or future spatial states. In this work, we introduce
+                <strong>Spatial Causal Prediction (SCP)</strong>, a new task paradigm that challenges models to reason
+                beyond observation and predict spatial causal outcomes. We further construct <strong>SCP-Bench</strong>,
+                a benchmark comprising 2,500 QA pairs across 1,181 videos spanning diverse viewpoints, scenes, and
+                causal directions, to support systematic evaluation. Through comprehensive experiments on 23
+                state-of-the-art models, we reveal substantial gaps between human and model performance, limited
+                temporal extrapolation, and weak causal grounding. We further analyze key factors influencing
+                performance and propose perception-enhancement and reasoning-guided strategies toward advancing spatial
+                causal intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
 
-<!-- SCP-Bench results table -->
-<section class="section scp-table-section">
-  <div class="container is-max-widescreen">
-    <h2 class="title is-3 has-text-centered" id="how-well-do-current-models-perform">How Well Do Current Models Perform?</h2>
-    <p class="scp-table-caption">
-      Evaluation on SCP-Bench. "Avg." indicates the overall average accuracy. For each category, the best-performing closed model and open-source model in average score are highlighted in deep blue, and best performance on each task is boxed.
-    </p>
-    <div class="scp-table-wrap">
-      <table class="scp-results-table">
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th class="avg-col">Avg.</th>
-            <th title="Appearance Order">App. Ord.</th>
-            <th title="Counting">Count.</th>
-            <th title="Planning">Plan.</th>
-            <th title="Relation">Rel.</th>
-            <th title="Relative Distance">Rel. Dist.</th>
-            <th title="Relative Size">Rel. Size</th>
-            <th title="Relative Speed">Rel. Speed</th>
-            <th title="Spatial State">Spat. State</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Human Performance</td>
-            <td class="avg-col">89.61</td>
-            <td>97.60</td>
-            <td>81.20</td>
-            <td>92.26</td>
-            <td>85.70</td>
-            <td>86.70</td>
-            <td>97.62</td>
-            <td>91.61</td>
-            <td>84.17</td>
-          </tr>
-
-          <tr class="group-row">
-            <td colspan="10">● <em>Closed Models</em></td>
-          </tr>
-          <tr>
-            <td>GPT-5</td>
-            <td class="avg-col deep-cell"><strong>66.24</strong></td>
-            <td><span class="boxed-best">79.04</span></td>
-            <td><span class="boxed-best">58.12</span></td>
-            <td><span class="boxed-best">59.06</span></td>
-            <td><span class="boxed-best">64.07</span></td>
-            <td><span class="boxed-best">70.48</span></td>
-            <td><span class="boxed-best">95.24</span></td>
-            <td><span class="boxed-best">77.42</span></td>
-            <td><span class="boxed-best">65.11</span></td>
-          </tr>
-          <tr>
-            <td>Gemini 2.5 Pro</td>
-            <td class="avg-col">55.84</td>
-            <td>69.28</td>
-            <td>54.87</td>
-            <td>52.76</td>
-            <td>46.20</td>
-            <td>63.47</td>
-            <td>88.10</td>
-            <td>67.10</td>
-            <td>62.41</td>
-          </tr>
-          <tr>
-            <td>Gemini 2.5 Flash</td>
-            <td class="avg-col">52.10</td>
-            <td>59.28</td>
-            <td>52.14</td>
-            <td>51.74</td>
-            <td>43.14</td>
-            <td>57.75</td>
-            <td>88.10</td>
-            <td>66.45</td>
-            <td>55.60</td>
-          </tr>
-          <tr>
-            <td>Claude Sonnet 4.5</td>
-            <td class="avg-col">56.14</td>
-            <td>68.86</td>
-            <td>52.14</td>
-            <td>57.43</td>
-            <td>45.65</td>
-            <td>60.90</td>
-            <td>80.95</td>
-            <td>68.39</td>
-            <td>63.90</td>
-          </tr>
-
-          <tr class="group-row">
-            <td colspan="10">● <em>Open-source Models</em></td>
-          </tr>
-          <tr><td>Qwen3-VL-2B</td><td class="avg-col">43.04</td><td>41.92</td><td>42.74</td><td>45.01</td><td>40.85</td><td>44.41</td><td>59.52</td><td>47.10</td><td>40.65</td></tr>
-          <tr><td>Qwen3-VL-8B</td><td class="avg-col">47.52</td><td>54.49</td><td>51.28</td><td>49.29</td><td>42.33</td><td>49.47</td><td>90.48</td><td>46.45</td><td>46.40</td></tr>
-          <tr><td>Qwen3-VL-30B-A3B</td><td class="avg-col">54.16</td><td>65.27</td><td>52.14</td><td>54.79</td><td>46.22</td><td>56.65</td><td>85.71</td><td>66.45</td><td>57.19</td></tr>
-          <tr><td>Qwen3-VL-32B</td><td class="avg-col">56.84</td><td>59.88</td><td>51.28</td><td>58.66</td><td>52.63</td><td>57.98</td><td>90.48</td><td>67.10</td><td>55.04</td></tr>
-          <tr>
-            <td>Qwen3-VL-235B-A22B</td>
-            <td class="avg-col deep-cell"><strong>61.04</strong></td>
-            <td><span class="boxed-best">67.07</span></td>
-            <td>54.70</td>
-            <td>60.90</td>
-            <td><span class="boxed-best">55.03</span></td>
-            <td><span class="boxed-best">63.03</span></td>
-            <td><span class="boxed-best">97.62</span></td>
-            <td><span class="boxed-best">74.84</span></td>
-            <td><span class="boxed-best">63.31</span></td>
-          </tr>
-          <tr><td>Qwen3-Omni-30B-A3B</td><td class="avg-col">53.60</td><td>63.47</td><td>55.56</td><td>53.56</td><td>47.03</td><td>53.72</td><td>88.10</td><td>65.81</td><td>55.40</td></tr>
-          <tr><td>InternVL3.5-8B</td><td class="avg-col">50.52</td><td>59.88</td><td>54.70</td><td>54.79</td><td>43.82</td><td>54.52</td><td>61.90</td><td>58.71</td><td>44.96</td></tr>
-          <tr><td>InternVL3.5-38B</td><td class="avg-col">53.56</td><td>62.28</td><td>53.85</td><td>56.01</td><td>46.34</td><td>57.98</td><td>90.48</td><td>65.81</td><td>48.20</td></tr>
-          <tr>
-            <td>InternVL3.5-241B-A28B</td>
-            <td class="avg-col"><strong>56.96</strong></td>
-            <td><span class="boxed-best">67.07</span></td>
-            <td><span class="boxed-best">60.68</span></td>
-            <td><span class="boxed-best">61.10</span></td>
-            <td>46.11</td>
-            <td>60.37</td>
-            <td>90.48</td>
-            <td>68.39</td>
-            <td>60.07</td>
-          </tr>
-          <tr><td>MiniCPM-V-4.5</td><td class="avg-col">43.80</td><td>53.29</td><td>49.57</td><td>43.99</td><td>36.04</td><td>49.20</td><td>76.19</td><td>52.26</td><td>42.81</td></tr>
-          <tr><td>DeepSeek-VL2</td><td class="avg-col">38.08</td><td>45.51</td><td>38.46</td><td>39.51</td><td>29.41</td><td>45.74</td><td>73.81</td><td>53.55</td><td>33.81</td></tr>
-          <tr><td>NVILA-8B</td><td class="avg-col">34.40</td><td>36.53</td><td>36.75</td><td>38.09</td><td>30.66</td><td>30.05</td><td>59.52</td><td>38.71</td><td>37.05</td></tr>
-          <tr><td>NVILA-15B</td><td class="avg-col">45.28</td><td>54.49</td><td>45.30</td><td>48.07</td><td>35.35</td><td>52.13</td><td>73.81</td><td>50.97</td><td>49.28</td></tr>
-          <tr><td>LLaVA-OneVision-7B</td><td class="avg-col">36.48</td><td>42.51</td><td>37.61</td><td>37.07</td><td>31.24</td><td>38.30</td><td>64.29</td><td>46.45</td><td>35.61</td></tr>
-          <tr><td>LLaVA-OneVision-70B</td><td class="avg-col">50.84</td><td>64.67</td><td>52.99</td><td>48.68</td><td>44.39</td><td>53.46</td><td>78.57</td><td>61.94</td><td>51.80</td></tr>
-          <tr><td>LLaVA-OneVision-1.5-8B</td><td class="avg-col">45.52</td><td>56.29</td><td>47.01</td><td>46.44</td><td>39.13</td><td>50.27</td><td>80.95</td><td>51.61</td><td>41.73</td></tr>
-          <tr><td>LLaVA-NeXT-Video-7B</td><td class="avg-col">36.60</td><td>43.11</td><td>25.64</td><td>35.44</td><td>29.52</td><td>48.40</td><td>54.76</td><td>54.84</td><td>32.73</td></tr>
-
-          <tr class="group-row">
-            <td colspan="10">● <em>Spatial Models</em></td>
-          </tr>
-          <tr><td>Spatial-MLLM</td><td class="avg-col">39.76</td><td>45.51</td><td>28.21</td><td>33.81</td><td>38.33</td><td>49.73</td><td>66.67</td><td>50.97</td><td>32.37</td></tr>
-          <tr><td>SpaceR</td><td class="avg-col">41.36</td><td>52.10</td><td>34.19</td><td>40.53</td><td>34.90</td><td>45.21</td><td>59.52</td><td>54.19</td><td>44.60</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<!-- End SCP-Bench results table -->
-
-<section class="section">
-  <div class="container is-max-widescreen content">
-    <p>
-      <strong>Overall Evaluation Results.</strong> Current MLLMs are still far from human performance on SCP-Bench. GPT-5 achieves the best overall score (66.24), followed by large open-source models such as Qwen3-VL-235B-A22B and InternVL3.5-241B-A28B. Task-wise, relative size is generally easier, while counting, planning, and relation remain the main bottlenecks, indicating weak high-order causal-spatial reasoning.
-    </p>
-
-    <p>
-      <strong>Temporal Extrapolation Horizon.</strong> We compare short-, medium-, and long-range prediction windows and observe only limited variation across ranges. This suggests current models are not truly benefiting from stronger long-horizon extrapolation, and often rely on local cues rather than robust temporal causal modeling.
-    </p>
-    <div class="figure-grid-two">
-      <figure class="image">
-        <img src="static/images/Evaluation_on_SCP-Bench-single-col.jpg" alt="Evaluation across perspectives, causal directions, and scenes" loading="lazy" style="display:block; width:100%; height:auto;">
-        <p class="figure-note">Fig. Results across perspectives, view directions, and scenes.</p>
-      </figure>
-      <figure class="image">
-        <img src="static/images/time-range2.jpg" alt="Temporal extrapolation horizon analysis" loading="lazy" style="display:block; width:100%; height:auto;">
-        <p class="figure-note">Fig. Temporal extrapolation horizon analysis (short 0–2s, mid 2–5s, long &gt;5s).</p>
-      </figure>
-    </div>
-
-    <p>
-      <strong>Causal Consistency.</strong> Case-level analysis shows that even when models capture local motion, they may violate basic physical causality in final judgments. In other words, perceptual fluency does not always translate into causally consistent prediction for unseen spatial states.
-    </p>
-    <figure class="image" style="max-width: 880px; margin: 0.8rem auto 0.6rem;">
-      <img src="static/images/Q4-Case7.jpg" alt="Causal consistency case study" loading="lazy" style="display:block; width:100%; height:auto;">
-      <p class="figure-note">Fig. Causal consistency evaluation with rationality, confidence, and evidence-based explanation.</p>
-    </figure>
-  </div>
-</section>
-
-<!-- What affects SCP -->
-<section class="section">
-  <div class="container is-max-widescreen">
-    <h2 class="title is-3 has-text-centered" id="what-affects-spatial-causal-prediction">What Affects Spatial Causal Prediction?</h2>
-    <div class="content">
-      <p>
-        <strong>Perception vs. Reasoning.</strong> Controlled experiments indicate that reasoning is the dominant limitation. When models are given the unseen target segment directly, performance rises noticeably; when only textual surrogates are provided, gains are limited and unstable. This implies that better perception alone is insufficient without stronger causal inference.
-      </p>
-      <!-- Figure/Table Placeholder: perception-reasoning decomposition -->
-
-      <p>
-        <strong>Single-Frame vs. Multi-Frame Reasoning.</strong> In several settings, using only the cutpoint frame performs similarly to, or slightly better than, using full visible video. This reveals that many models still fail to exploit temporal continuity and mostly depend on static spatial cues.
-      </p>
-
-      <p>
-        <strong>Sensitivity to Temporal Causality.</strong> After temporally flipping input videos, accuracy drops are generally small. The weak sensitivity to temporal inversion further suggests that current models do not yet form stable causal direction representations.
-      </p>
-
-      <p>
-        <strong>Is Visual Input Necessary?</strong> Yes. Removing video input leads to clear degradation, and dense captions only partially compensate. Visual evidence remains essential for spatial causal prediction, especially when fine-grained motion and interaction details determine the answer.
-      </p>
-      <div class="figure-grid-two">
-        <figure class="image">
-          <img src="static/images/visible_range3_model3.jpg" alt="Visible range comparison" loading="lazy" style="display:block; width:100%; height:auto;">
-          <p class="figure-note">Fig. Visible range comparison: only cutpoint, full video, and ground-truth unseen clip.</p>
-        </figure>
-        <figure class="image">
-          <img src="static/images/visual_no_visual1.jpg" alt="Performance with and without visual input" loading="lazy" style="display:block; width:100%; height:auto;">
-          <p class="figure-note">Fig. Accuracy gap between vision-enabled and vision-disabled settings across tasks.</p>
+    <!-- Spatial Causal Prediction and Construction Pipeline -->
+    <section class="section">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">Construction Pipeline</h2>
+        <figure class="image" style="max-width: 1000px; margin: 0 auto;">
+          <img src="static/images/construction_pipeline_v5.png" alt="Construction pipeline figure" loading="lazy"
+            style="display: block; width: 100%; height: auto;">
         </figure>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End what affects SCP -->
+    </section>
+    <!-- End spatial causal prediction and construction pipeline -->
 
-<!-- How to improve SCP -->
-<section class="section">
-  <div class="container is-max-widescreen">
-    <h2 class="title is-3 has-text-centered" id="how-to-improve-spatial-causal-prediction">How to Improve Spatial Causal Prediction?</h2>
-    <div class="content">
-      <p>
-        <strong>Scaling Up Model Size.</strong> Larger models consistently provide the strongest gains on SCP-Bench. While small-scale increases can be noisy, substantial scale jumps deliver clear improvements, making scale-up the most reliable baseline strategy.
-      </p>
+    <!-- SCP-Bench results table -->
+    <section class="section scp-table-section">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered" id="how-well-do-current-models-perform">How Well Do Current Models
+          Perform?</h2>
+        <p class="scp-table-caption">
+          Evaluation on SCP-Bench. "Avg." indicates the overall average accuracy. For each category, the best-performing
+          closed model and open-source model in average score are highlighted in deep blue, and best performance on each
+          task is boxed.
+        </p>
+        <div class="scp-table-wrap">
+          <table class="scp-results-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th class="avg-col">Avg.</th>
+                <th title="Appearance Order">App. Ord.</th>
+                <th title="Counting">Count.</th>
+                <th title="Planning">Plan.</th>
+                <th title="Relation">Rel.</th>
+                <th title="Relative Distance">Rel. Dist.</th>
+                <th title="Relative Size">Rel. Size</th>
+                <th title="Relative Speed">Rel. Speed</th>
+                <th title="Spatial State">Spat. State</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Human Performance</td>
+                <td class="avg-col">89.61</td>
+                <td>97.60</td>
+                <td>81.20</td>
+                <td>92.26</td>
+                <td>85.70</td>
+                <td>86.70</td>
+                <td>97.62</td>
+                <td>91.61</td>
+                <td>84.17</td>
+              </tr>
 
-      <p>
-        <strong>Reasoning Strategies (CoT / Self-Think).</strong> Vanilla CoT can help some models, but improvements are not universal. Self-think modes also show mixed effects and may introduce extra reasoning noise. Overall, prompting-level reasoning tricks alone are not sufficient.
-      </p>
-      <div class="figure-grid-two">
-        <figure class="image">
-          <img src="static/images/model_size3.jpg" alt="Model scale-up effect" loading="lazy" style="display:block; width:100%; height:auto;">
-          <p class="figure-note">Fig. Performance comparison across model scales.</p>
-        </figure>
-        <figure class="image">
-          <img src="static/images/think_mode3.jpg" alt="Thinking mode comparison" loading="lazy" style="display:block; width:100%; height:auto;">
-          <p class="figure-note">Fig. Performance with vs. without self-think reasoning.</p>
+              <tr class="group-row">
+                <td colspan="10">● <em>Closed Models</em></td>
+              </tr>
+              <tr>
+                <td>GPT-5</td>
+                <td class="avg-col deep-cell"><strong>66.24</strong></td>
+                <td><span class="boxed-best">79.04</span></td>
+                <td><span class="boxed-best">58.12</span></td>
+                <td><span class="boxed-best">59.06</span></td>
+                <td><span class="boxed-best">64.07</span></td>
+                <td><span class="boxed-best">70.48</span></td>
+                <td><span class="boxed-best">95.24</span></td>
+                <td><span class="boxed-best">77.42</span></td>
+                <td><span class="boxed-best">65.11</span></td>
+              </tr>
+              <tr>
+                <td>Gemini 2.5 Pro</td>
+                <td class="avg-col">55.84</td>
+                <td>69.28</td>
+                <td>54.87</td>
+                <td>52.76</td>
+                <td>46.20</td>
+                <td>63.47</td>
+                <td>88.10</td>
+                <td>67.10</td>
+                <td>62.41</td>
+              </tr>
+              <tr>
+                <td>Gemini 2.5 Flash</td>
+                <td class="avg-col">52.10</td>
+                <td>59.28</td>
+                <td>52.14</td>
+                <td>51.74</td>
+                <td>43.14</td>
+                <td>57.75</td>
+                <td>88.10</td>
+                <td>66.45</td>
+                <td>55.60</td>
+              </tr>
+              <tr>
+                <td>Claude Sonnet 4.5</td>
+                <td class="avg-col">56.14</td>
+                <td>68.86</td>
+                <td>52.14</td>
+                <td>57.43</td>
+                <td>45.65</td>
+                <td>60.90</td>
+                <td>80.95</td>
+                <td>68.39</td>
+                <td>63.90</td>
+              </tr>
+
+              <tr class="group-row">
+                <td colspan="10">● <em>Open-source Models</em></td>
+              </tr>
+              <tr>
+                <td>Qwen3-VL-2B</td>
+                <td class="avg-col">43.04</td>
+                <td>41.92</td>
+                <td>42.74</td>
+                <td>45.01</td>
+                <td>40.85</td>
+                <td>44.41</td>
+                <td>59.52</td>
+                <td>47.10</td>
+                <td>40.65</td>
+              </tr>
+              <tr>
+                <td>Qwen3-VL-8B</td>
+                <td class="avg-col">47.52</td>
+                <td>54.49</td>
+                <td>51.28</td>
+                <td>49.29</td>
+                <td>42.33</td>
+                <td>49.47</td>
+                <td>90.48</td>
+                <td>46.45</td>
+                <td>46.40</td>
+              </tr>
+              <tr>
+                <td>Qwen3-VL-30B-A3B</td>
+                <td class="avg-col">54.16</td>
+                <td>65.27</td>
+                <td>52.14</td>
+                <td>54.79</td>
+                <td>46.22</td>
+                <td>56.65</td>
+                <td>85.71</td>
+                <td>66.45</td>
+                <td>57.19</td>
+              </tr>
+              <tr>
+                <td>Qwen3-VL-32B</td>
+                <td class="avg-col">56.84</td>
+                <td>59.88</td>
+                <td>51.28</td>
+                <td>58.66</td>
+                <td>52.63</td>
+                <td>57.98</td>
+                <td>90.48</td>
+                <td>67.10</td>
+                <td>55.04</td>
+              </tr>
+              <tr>
+                <td>Qwen3-VL-235B-A22B</td>
+                <td class="avg-col deep-cell"><strong>61.04</strong></td>
+                <td><span class="boxed-best">67.07</span></td>
+                <td>54.70</td>
+                <td>60.90</td>
+                <td><span class="boxed-best">55.03</span></td>
+                <td><span class="boxed-best">63.03</span></td>
+                <td><span class="boxed-best">97.62</span></td>
+                <td><span class="boxed-best">74.84</span></td>
+                <td><span class="boxed-best">63.31</span></td>
+              </tr>
+              <tr>
+                <td>Qwen3-Omni-30B-A3B</td>
+                <td class="avg-col">53.60</td>
+                <td>63.47</td>
+                <td>55.56</td>
+                <td>53.56</td>
+                <td>47.03</td>
+                <td>53.72</td>
+                <td>88.10</td>
+                <td>65.81</td>
+                <td>55.40</td>
+              </tr>
+              <tr>
+                <td>InternVL3.5-8B</td>
+                <td class="avg-col">50.52</td>
+                <td>59.88</td>
+                <td>54.70</td>
+                <td>54.79</td>
+                <td>43.82</td>
+                <td>54.52</td>
+                <td>61.90</td>
+                <td>58.71</td>
+                <td>44.96</td>
+              </tr>
+              <tr>
+                <td>InternVL3.5-38B</td>
+                <td class="avg-col">53.56</td>
+                <td>62.28</td>
+                <td>53.85</td>
+                <td>56.01</td>
+                <td>46.34</td>
+                <td>57.98</td>
+                <td>90.48</td>
+                <td>65.81</td>
+                <td>48.20</td>
+              </tr>
+              <tr>
+                <td>InternVL3.5-241B-A28B</td>
+                <td class="avg-col"><strong>56.96</strong></td>
+                <td><span class="boxed-best">67.07</span></td>
+                <td><span class="boxed-best">60.68</span></td>
+                <td><span class="boxed-best">61.10</span></td>
+                <td>46.11</td>
+                <td>60.37</td>
+                <td>90.48</td>
+                <td>68.39</td>
+                <td>60.07</td>
+              </tr>
+              <tr>
+                <td>MiniCPM-V-4.5</td>
+                <td class="avg-col">43.80</td>
+                <td>53.29</td>
+                <td>49.57</td>
+                <td>43.99</td>
+                <td>36.04</td>
+                <td>49.20</td>
+                <td>76.19</td>
+                <td>52.26</td>
+                <td>42.81</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-VL2</td>
+                <td class="avg-col">38.08</td>
+                <td>45.51</td>
+                <td>38.46</td>
+                <td>39.51</td>
+                <td>29.41</td>
+                <td>45.74</td>
+                <td>73.81</td>
+                <td>53.55</td>
+                <td>33.81</td>
+              </tr>
+              <tr>
+                <td>NVILA-8B</td>
+                <td class="avg-col">34.40</td>
+                <td>36.53</td>
+                <td>36.75</td>
+                <td>38.09</td>
+                <td>30.66</td>
+                <td>30.05</td>
+                <td>59.52</td>
+                <td>38.71</td>
+                <td>37.05</td>
+              </tr>
+              <tr>
+                <td>NVILA-15B</td>
+                <td class="avg-col">45.28</td>
+                <td>54.49</td>
+                <td>45.30</td>
+                <td>48.07</td>
+                <td>35.35</td>
+                <td>52.13</td>
+                <td>73.81</td>
+                <td>50.97</td>
+                <td>49.28</td>
+              </tr>
+              <tr>
+                <td>LLaVA-OneVision-7B</td>
+                <td class="avg-col">36.48</td>
+                <td>42.51</td>
+                <td>37.61</td>
+                <td>37.07</td>
+                <td>31.24</td>
+                <td>38.30</td>
+                <td>64.29</td>
+                <td>46.45</td>
+                <td>35.61</td>
+              </tr>
+              <tr>
+                <td>LLaVA-OneVision-70B</td>
+                <td class="avg-col">50.84</td>
+                <td>64.67</td>
+                <td>52.99</td>
+                <td>48.68</td>
+                <td>44.39</td>
+                <td>53.46</td>
+                <td>78.57</td>
+                <td>61.94</td>
+                <td>51.80</td>
+              </tr>
+              <tr>
+                <td>LLaVA-OneVision-1.5-8B</td>
+                <td class="avg-col">45.52</td>
+                <td>56.29</td>
+                <td>47.01</td>
+                <td>46.44</td>
+                <td>39.13</td>
+                <td>50.27</td>
+                <td>80.95</td>
+                <td>51.61</td>
+                <td>41.73</td>
+              </tr>
+              <tr>
+                <td>LLaVA-NeXT-Video-7B</td>
+                <td class="avg-col">36.60</td>
+                <td>43.11</td>
+                <td>25.64</td>
+                <td>35.44</td>
+                <td>29.52</td>
+                <td>48.40</td>
+                <td>54.76</td>
+                <td>54.84</td>
+                <td>32.73</td>
+              </tr>
+
+              <tr class="group-row">
+                <td colspan="10">● <em>Spatial Models</em></td>
+              </tr>
+              <tr>
+                <td>Spatial-MLLM</td>
+                <td class="avg-col">39.76</td>
+                <td>45.51</td>
+                <td>28.21</td>
+                <td>33.81</td>
+                <td>38.33</td>
+                <td>49.73</td>
+                <td>66.67</td>
+                <td>50.97</td>
+                <td>32.37</td>
+              </tr>
+              <tr>
+                <td>SpaceR</td>
+                <td class="avg-col">41.36</td>
+                <td>52.10</td>
+                <td>34.19</td>
+                <td>40.53</td>
+                <td>34.90</td>
+                <td>45.21</td>
+                <td>59.52</td>
+                <td>54.19</td>
+                <td>44.60</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- End SCP-Bench results table -->
+
+    <section class="section">
+      <div class="container is-max-widescreen content">
+        <p>
+          <strong>Overall Evaluation Results.</strong> Current MLLMs are still far from human performance on SCP-Bench.
+          GPT-5 achieves the best overall score (66.24), followed by large open-source models such as Qwen3-VL-235B-A22B
+          and InternVL3.5-241B-A28B. Task-wise, relative size is generally easier, while counting, planning, and
+          relation remain the main bottlenecks, indicating weak high-order causal-spatial reasoning.
+        </p>
+
+        <p>
+          <strong>Temporal Extrapolation Horizon.</strong> We compare short-, medium-, and long-range prediction windows
+          and observe only limited variation across ranges. This suggests current models are not truly benefiting from
+          stronger long-horizon extrapolation, and often rely on local cues rather than robust temporal causal modeling.
+        </p>
+        <div class="figure-grid-two">
+          <figure class="image">
+            <img src="static/images/Evaluation_on_SCP-Bench-single-col.jpg"
+              alt="Evaluation across perspectives, causal directions, and scenes" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+            <p class="figure-note">Fig. Results across perspectives, view directions, and scenes.</p>
+          </figure>
+          <figure class="image">
+            <img src="static/images/time-range2.jpg" alt="Temporal extrapolation horizon analysis" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+            <p class="figure-note">Fig. Temporal extrapolation horizon analysis (short 0–2s, mid 2–5s, long &gt;5s).</p>
+          </figure>
+        </div>
+
+        <p>
+          <strong>Causal Consistency.</strong> Case-level analysis shows that even when models capture local motion,
+          they may violate basic physical causality in final judgments. In other words, perceptual fluency does not
+          always translate into causally consistent prediction for unseen spatial states.
+        </p>
+        <figure class="image" style="max-width: 880px; margin: 0.8rem auto 0.6rem;">
+          <img src="static/images/Q4-Case7.jpg" alt="Causal consistency case study" loading="lazy"
+            style="display:block; width:100%; height:auto;">
+          <p class="figure-note">Fig. Causal consistency evaluation with rationality, confidence, and evidence-based
+            explanation.</p>
         </figure>
       </div>
+    </section>
 
-      <p>
-        <strong>Perception Enhancement.</strong> Adding dense captions or spatial-interaction graphs yields only modest average gains. These methods can help specific categories, but they do not fundamentally resolve causal prediction errors.
-      </p>
-      <p>
-        <strong>Unseen Causal Scaffolds.</strong> Injecting future-oriented auxiliary signals is promising, especially textual causal scaffolds generated by strong LLMs. Compared with image/video scaffolds, text-based guidance is easier for current MLLMs to absorb and often produces more stable improvements.
-      </p>
-      <div class="figure-grid-two">
-        <figure class="image">
-          <img src="static/images/perception_enhancement2.jpg" alt="Perception enhancement strategies" loading="lazy" style="display:block; width:100%; height:auto;">
-          <p class="figure-note">Fig. Comparison of perception enhancement strategies.</p>
-        </figure>
-        <figure class="image">
-          <img src="static/images/future_enhancement2.jpg" alt="Future scaffold enhancement" loading="lazy" style="display:block; width:100%; height:auto;">
-          <p class="figure-note">Fig. Unseen spatial causal scaffolds for enhanced reasoning (text/image/video).</p>
-        </figure>
+    <!-- What affects SCP -->
+    <section class="section">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered" id="what-affects-spatial-causal-prediction">What Affects Spatial Causal
+          Prediction?</h2>
+        <div class="content">
+          <p>
+            <strong>Perception vs. Reasoning.</strong> Controlled experiments indicate that reasoning is the dominant
+            limitation. When models are given the unseen target segment directly, performance rises noticeably; when
+            only textual surrogates are provided, gains are limited and unstable. This implies that better perception
+            alone is insufficient without stronger causal inference.
+          </p>
+          <!-- Figure/Table Placeholder: perception-reasoning decomposition -->
+
+          <p>
+            <strong>Single-Frame vs. Multi-Frame Reasoning.</strong> In several settings, using only the cutpoint frame
+            performs similarly to, or slightly better than, using full visible video. This reveals that many models
+            still fail to exploit temporal continuity and mostly depend on static spatial cues.
+          </p>
+
+          <p>
+            <strong>Sensitivity to Temporal Causality.</strong> After temporally flipping input videos, accuracy drops
+            are generally small. The weak sensitivity to temporal inversion further suggests that current models do not
+            yet form stable causal direction representations.
+          </p>
+
+          <p>
+            <strong>Is Visual Input Necessary?</strong> Yes. Removing video input leads to clear degradation, and dense
+            captions only partially compensate. Visual evidence remains essential for spatial causal prediction,
+            especially when fine-grained motion and interaction details determine the answer.
+          </p>
+          <div class="figure-grid-two">
+            <figure class="image">
+              <img src="static/images/visible_range3_model3.jpg" alt="Visible range comparison" loading="lazy"
+                style="display:block; width:100%; height:auto;">
+              <p class="figure-note">Fig. Visible range comparison: only cutpoint, full video, and ground-truth unseen
+                clip.</p>
+            </figure>
+            <figure class="image">
+              <img src="static/images/visual_no_visual1.jpg" alt="Performance with and without visual input"
+                loading="lazy" style="display:block; width:100%; height:auto;">
+              <p class="figure-note">Fig. Accuracy gap between vision-enabled and vision-disabled settings across tasks.
+              </p>
+            </figure>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End how to improve SCP -->
+    </section>
+    <!-- End what affects SCP -->
 
-<!-- Conclusion -->
-<section class="section">
-  <div class="container is-max-widescreen">
-    <h2 class="title is-3 has-text-centered" id="conclusion">Conclusion</h2>
-    <div class="content">
-      <p>
-        We introduce Spatial Causal Prediction (SCP) and SCP-Bench to evaluate predictive spatial reasoning beyond directly observed scenes. Across comprehensive experiments, current MLLMs remain substantially below human performance, with especially clear weaknesses in forward prediction and causal consistency.
-      </p>
-      <p>
-        Our analyses indicate that the primary bottleneck is not only perception quality, but also the ability to perform robust causal reasoning over dynamic spatial evolution. While prompting and perception-level enhancements provide limited gains, larger model scale and explicit causal scaffolding show stronger potential for improving SCP capability.
-      </p>
-      <p>
-        We hope SCP-Bench can serve as a practical testbed for future research on spatial causal intelligence in video understanding and embodied real-world decision making.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- End conclusion -->
+    <!-- How to improve SCP -->
+    <section class="section">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered" id="how-to-improve-spatial-causal-prediction">How to Improve Spatial
+          Causal Prediction?</h2>
+        <div class="content">
+          <p>
+            <strong>Scaling Up Model Size.</strong> Larger models consistently provide the strongest gains on SCP-Bench.
+            While small-scale increases can be noisy, substantial scale jumps deliver clear improvements, making
+            scale-up the most reliable baseline strategy.
+          </p>
+
+          <p>
+            <strong>Reasoning Strategies (CoT / Self-Think).</strong> Vanilla CoT can help some models, but improvements
+            are not universal. Self-think modes also show mixed effects and may introduce extra reasoning noise.
+            Overall, prompting-level reasoning tricks alone are not sufficient.
+          </p>
+          <div class="figure-grid-two">
+            <figure class="image">
+              <img src="static/images/model_size3.jpg" alt="Model scale-up effect" loading="lazy"
+                style="display:block; width:100%; height:auto;">
+              <p class="figure-note">Fig. Performance comparison across model scales.</p>
+            </figure>
+            <figure class="image">
+              <img src="static/images/think_mode3.jpg" alt="Thinking mode comparison" loading="lazy"
+                style="display:block; width:100%; height:auto;">
+              <p class="figure-note">Fig. Performance with vs. without self-think reasoning.</p>
+            </figure>
+          </div>
+
+          <p>
+            <strong>Perception Enhancement.</strong> Adding dense captions or spatial-interaction graphs yields only
+            modest average gains. These methods can help specific categories, but they do not fundamentally resolve
+            causal prediction errors.
+          </p>
+          <p>
+            <strong>Unseen Causal Scaffolds.</strong> Injecting future-oriented auxiliary signals is promising,
+            especially textual causal scaffolds generated by strong LLMs. Compared with image/video scaffolds,
+            text-based guidance is easier for current MLLMs to absorb and often produces more stable improvements.
+          </p>
+          <div class="figure-grid-two">
+            <figure class="image">
+              <img src="static/images/perception_enhancement2.jpg" alt="Perception enhancement strategies"
+                loading="lazy" style="display:block; width:100%; height:auto;">
+              <p class="figure-note">Fig. Comparison of perception enhancement strategies.</p>
+            </figure>
+            <figure class="image">
+              <img src="static/images/future_enhancement2.jpg" alt="Future scaffold enhancement" loading="lazy"
+                style="display:block; width:100%; height:auto;">
+              <p class="figure-note">Fig. Unseen spatial causal scaffolds for enhanced reasoning (text/image/video).</p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End how to improve SCP -->
+
+    <!-- Conclusion -->
+    <section class="section">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered" id="conclusion">Conclusion</h2>
+        <div class="content">
+          <p>
+            We introduce Spatial Causal Prediction (SCP) and SCP-Bench, establishing a new paradigm for predictive
+            spatial reasoning beyond visible scenes. Extensive evaluations indicate that current MLLMs remain far from
+            human-level performance, performing better on past inference than future prediction, and relying mainly on
+            perceptual cues. In-depth controlled analyses show that reasoning, rather than perception, constitutes the
+            major bottleneck. While explicit reasoning and structured spatial representations bring limited gains,
+            notably scaling up and integrating causal scaffolds offer a promising path for better SCP performance.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End conclusion -->
 
 
-<!--
+    <!--
 Image carousel
 <section class="hero is-small">
   <div class="hero-body">
@@ -727,7 +980,7 @@ End image carousel
 
 
 
-<!--
+    <!--
 Video carousel
 <section class="hero is-small">
   <div class="hero-body">
@@ -761,8 +1014,8 @@ End video carousel
 
 
 
-<!--BibTex citation -->
-  <!-- <section class="section" id="BibTeX">
+    <!--BibTex citation -->
+    <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
         <h2 class="title">BibTeX</h2>
@@ -780,32 +1033,37 @@ End video carousel
 }</code></pre>
     </div>
 </section> -->
-<!--End BibTex citation -->
+    <!--End BibTex citation -->
 
 
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                You are free to borrow the source code of this website, we just ask that you link back to this page in
+                the footer. <br> This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
 
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+
+</html>
