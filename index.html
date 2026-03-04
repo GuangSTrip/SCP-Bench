@@ -562,16 +562,26 @@
     <p>
       <strong>Overall Evaluation Results.</strong> Current MLLMs are still far from human performance on SCP-Bench. GPT-5 achieves the best overall score (66.24), followed by large open-source models such as Qwen3-VL-235B-A22B and InternVL3.5-241B-A28B. Task-wise, relative size is generally easier, while counting, planning, and relation remain the main bottlenecks, indicating weak high-order causal-spatial reasoning.
     </p>
+    <figure class="image" style="max-width: 900px; margin: 0.8rem auto 1.2rem;">
+      <img src="static/images/Evaluation_on_SCP-Bench-single-col.jpg" alt="Evaluation across perspectives, causal directions, and scenes" loading="lazy" style="display:block; width:100%; height:auto;">
+      <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Results across perspectives, view directions, and scenes.</p>
+    </figure>
 
     <p>
       <strong>Temporal Extrapolation Horizon.</strong> We compare short-, medium-, and long-range prediction windows and observe only limited variation across ranges. This suggests current models are not truly benefiting from stronger long-horizon extrapolation, and often rely on local cues rather than robust temporal causal modeling.
     </p>
-    <!-- Figure Placeholder: temporal range analysis -->
+    <figure class="image" style="max-width: 760px; margin: 0.8rem auto 1.2rem;">
+      <img src="static/images/time-range2.jpg" alt="Temporal extrapolation horizon analysis" loading="lazy" style="display:block; width:100%; height:auto;">
+      <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Temporal extrapolation horizon analysis (short / medium / long).</p>
+    </figure>
 
     <p>
       <strong>Causal Consistency.</strong> Case-level analysis shows that even when models capture local motion, they may violate basic physical causality in final judgments. In other words, perceptual fluency does not always translate into causally consistent prediction for unseen spatial states.
     </p>
-    <!-- Figure Placeholder: causal consistency case -->
+    <figure class="image" style="max-width: 980px; margin: 0.8rem auto 0.6rem;">
+      <img src="static/images/Q4-Case7.jpg" alt="Causal consistency case study" loading="lazy" style="display:block; width:100%; height:auto;">
+      <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Case study for evaluating causal consistency in model reasoning.</p>
+    </figure>
   </div>
 </section>
 
@@ -588,7 +598,10 @@
       <p>
         <strong>Single-Frame vs. Multi-Frame Reasoning.</strong> In several settings, using only the cutpoint frame performs similarly to, or slightly better than, using full visible video. This reveals that many models still fail to exploit temporal continuity and mostly depend on static spatial cues.
       </p>
-      <!-- Figure Placeholder: visible range comparison -->
+      <figure class="image" style="max-width: 760px; margin: 0.8rem auto 1.2rem;">
+        <img src="static/images/visible_range3_model3.jpg" alt="Visible range comparison" loading="lazy" style="display:block; width:100%; height:auto;">
+        <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Visible range comparison under different input settings.</p>
+      </figure>
 
       <p>
         <strong>Sensitivity to Temporal Causality.</strong> After temporally flipping input videos, accuracy drops are generally small. The weak sensitivity to temporal inversion further suggests that current models do not yet form stable causal direction representations.
@@ -597,7 +610,10 @@
       <p>
         <strong>Is Visual Input Necessary?</strong> Yes. Removing video input leads to clear degradation, and dense captions only partially compensate. Visual evidence remains essential for spatial causal prediction, especially when fine-grained motion and interaction details determine the answer.
       </p>
-      <!-- Figure Placeholder: visual vs non-visual input -->
+      <figure class="image" style="max-width: 760px; margin: 0.8rem auto 0.6rem;">
+        <img src="static/images/visual_no_visual1.jpg" alt="Performance with and without visual input" loading="lazy" style="display:block; width:100%; height:auto;">
+        <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Performance gap between vision-enabled and vision-disabled settings.</p>
+      </figure>
     </div>
   </div>
 </section>
@@ -611,22 +627,34 @@
       <p>
         <strong>Scaling Up Model Size.</strong> Larger models consistently provide the strongest gains on SCP-Bench. While small-scale increases can be noisy, substantial scale jumps deliver clear improvements, making scale-up the most reliable baseline strategy.
       </p>
-      <!-- Figure Placeholder: model scale-up -->
+      <figure class="image" style="max-width: 640px; margin: 0.8rem auto 1.2rem;">
+        <img src="static/images/model_size3.jpg" alt="Model scale-up effect" loading="lazy" style="display:block; width:100%; height:auto;">
+        <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Performance comparison across model scales.</p>
+      </figure>
 
       <p>
         <strong>Reasoning Strategies (CoT / Self-Think).</strong> Vanilla CoT can help some models, but improvements are not universal. Self-think modes also show mixed effects and may introduce extra reasoning noise. Overall, prompting-level reasoning tricks alone are not sufficient.
       </p>
-      <!-- Figure/Table Placeholder: CoT and self-think -->
+      <figure class="image" style="max-width: 640px; margin: 0.8rem auto 1.2rem;">
+        <img src="static/images/think_mode3.jpg" alt="Thinking mode comparison" loading="lazy" style="display:block; width:100%; height:auto;">
+        <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Performance with vs. without self-think reasoning.</p>
+      </figure>
 
       <p>
         <strong>Perception Enhancement.</strong> Adding dense captions or spatial-interaction graphs yields only modest average gains. These methods can help specific categories, but they do not fundamentally resolve causal prediction errors.
       </p>
-      <!-- Figure Placeholder: perception enhancement -->
+      <figure class="image" style="max-width: 760px; margin: 0.8rem auto 1.2rem;">
+        <img src="static/images/perception_enhancement2.jpg" alt="Perception enhancement strategies" loading="lazy" style="display:block; width:100%; height:auto;">
+        <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Comparison of perception enhancement strategies.</p>
+      </figure>
 
       <p>
         <strong>Unseen Causal Scaffolds.</strong> Injecting future-oriented auxiliary signals is promising, especially textual causal scaffolds generated by strong LLMs. Compared with image/video scaffolds, text-based guidance is easier for current MLLMs to absorb and often produces more stable improvements.
       </p>
-      <!-- Figure Placeholder: future scaffold enhancement -->
+      <figure class="image" style="max-width: 760px; margin: 0.8rem auto 0.6rem;">
+        <img src="static/images/future_enhancement2.jpg" alt="Future scaffold enhancement" loading="lazy" style="display:block; width:100%; height:auto;">
+        <p class="has-text-centered is-size-7" style="margin-top:0.4rem;">Unseen spatial causal scaffolds for enhanced reasoning.</p>
+      </figure>
     </div>
   </div>
 </section>
