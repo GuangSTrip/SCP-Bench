@@ -874,30 +874,58 @@ a:focus {
 }
 
 .key-takeaways {
-  margin: 1rem auto 0.2rem;
-  padding: 0.85rem 1rem 0.7rem;
+  margin: 1.5rem auto 1rem;
+  padding: 1.5rem 1.8rem;
   max-width: 980px;
-  border: 1px solid rgb(210, 227, 251);
-  border-left: 4px solid rgb(78, 146, 222);
-  border-radius: 8px;
-  background: rgb(245, 250, 255);
+  border-radius: 12px;
+  background: linear-gradient(to right, #ffffff, #f8fafc);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-left: 5px solid #3b82f6;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.key-takeaways:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
 }
 
 .takeaways-title {
-  margin: 0 0 0.4rem;
-  font-size: 0.92rem;
+  margin: 0 0 0.8rem 0;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: rgb(52, 90, 142);
+  color: #1e3a8a;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.takeaways-title::before {
+  content: '💡';
+  font-size: 1.2rem;
 }
 
 .key-takeaways ul {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 1.5rem;
+  list-style-type: none;
 }
 
 .key-takeaways li {
-  margin: 0.15rem 0;
+  position: relative;
+  margin: 0.5rem 0;
   color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.key-takeaways li::before {
+  content: '→';
+  color: #3b82f6;
+  position: absolute;
+  left: -1.5rem;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1200px) {
