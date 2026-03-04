@@ -631,7 +631,7 @@
       <div class="container is-max-widescreen">
         <h2 class="title is-3 has-text-centered">Construction Pipeline</h2>
         <figure class="image" style="max-width: 1000px; margin: 0 auto;">
-          <img src="static/images/construction_pipeline_v5.png" alt="Construction pipeline figure" loading="lazy"
+          <img src="static/images/Construction_Pipeline_v6.jpg" alt="Construction pipeline figure" loading="lazy"
             style="display: block; width: 100%; height: auto;">
         </figure>
       </div>
@@ -977,7 +977,8 @@
         <div class="columns is-desktop is-vcentered">
           <div class="column content is-7">
             <p>
-              <strong>Overall Evaluation Results.</strong> Table 2 summarizes the overall performance of MLLMs on
+              <strong>Overall Evaluation Results.</strong> The table above summarizes the overall performance of MLLMs
+              on
               SCP-Bench. Current systems remain far below human level, underscoring the substantial gap in spatial
               causal prediction.
               GPT-5 attains the highest accuracy (66.24%), followed by Qwen3-VL-235B (61.04%) and InternVL3.5-241B
@@ -999,7 +1000,7 @@
               scene categories, with slightly stronger results in driving-related and factory/machine environments.
             </p>
           </div>
-          <div class="column is-5">
+          <div class="column" style="flex: none; width: 45.83%;">
             <figure class="image">
               <img src="static/images/Evaluation_on_SCP-Bench-single-col.jpg"
                 alt="Evaluation across perspectives, causal directions, and scenes" loading="lazy"
@@ -1011,12 +1012,12 @@
         <div class="columns is-desktop is-vcentered">
           <div class="column content is-7">
             <p>
-              <strong>Temporal Extrapolation Horizon.</strong> We compare short-, medium-, and long-range prediction
-              windows
-              and observe only limited variation across ranges. This suggests current models are not truly benefiting
-              from
-              stronger long-horizon extrapolation, and often rely on local cues rather than robust temporal causal
-              modeling.
+              <strong>Temporal Extrapolation Horizon.</strong> We analyze how model performance varies with different
+              temporal prediction ranges.
+              Overall, model accuracy remains relatively stable across horizons, averaging around 46.8%.
+              This indicates that dynamic frame sampling in existing MLLMs mitigates sensitivity to temporal length
+              difference, and also that the current temporal segmentation range may be too narrow to induce significant
+              variation.
             </p>
           </div>
           <div class="column is-5">
@@ -1028,9 +1029,10 @@
         </div>
 
         <p>
-          <strong>Causal Consistency.</strong> Case-level analysis shows that even when models capture local motion,
-          they may violate basic physical causality in final judgments. In other words, perceptual fluency does not
-          always translate into causally consistent prediction for unseen spatial states.
+          <strong>Causal Consistency.</strong> To complement the quantitative results, we conduct a case study to
+          examine whether models obey basic physical and temporal causal constraints.
+          Even when models perceive local motion correctly, their explanations can still violate basic causal
+          constraints, revealing a gap in causal consistency for MLLMs.
         </p>
         <figure class="image" style="max-width: 880px; margin: 0.8rem auto 0.6rem;">
           <img src="static/images/Q4-Case7.jpg" alt="Causal consistency case study" loading="lazy"
@@ -1053,35 +1055,53 @@
         <h2 class="title is-3 has-text-centered" id="what-affects-spatial-causal-prediction">What Affects Spatial Causal
           Prediction?</h2>
         <div class="content">
+          <div class="columns is-desktop" style="margin-bottom: 0.5rem;">
+            <div class="column content is-7" style="align-self: flex-start;">
+              <p>
+                <strong>Perception vs. Reasoning.</strong>
+                In one condition, we provide the models with the unseen parts of the clips, referred to as the Gold
+                Video, thereby removing the need for causal inference and turning the task into pure visual
+                understanding.
+                In contrast, we replace the visible parts of the clips with dense captions, thereby
+                isolating perception and forcing the model to rely solely on textual reasoning.
+                Results show that perception is not the primary bottleneck and that the
+                main limitation lies in spatial causal reasoning.
+              </p>
+            </div>
+            <div class="column is-5" style="align-self: flex-start;">
+              <figure class="image" style="margin: 0;">
+                <img src="static/images/Perception_Reasoning.png" alt="Perception vs Reasoning decomposition"
+                  loading="lazy" style="display:block; width:100%; height:auto;">
+                <p class="figure-note">"Base" is the standard evaluation performance; "Gold Video" evaluates perceptual
+                  understanding using unseen part; "Caption w/o Video" tests reasoning based on captions alone.</p>
+              </figure>
+            </div>
+          </div>
           <p>
-            <strong>Perception vs. Reasoning.</strong> Controlled experiments indicate that reasoning is the dominant
-            limitation. When models are given the unseen target segment directly, performance rises noticeably; when
-            only textual surrogates are provided, gains are limited and unstable. This implies that better perception
-            alone is insufficient without stronger causal inference.
-          </p>
-          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
-            <img src="static/images/Perception_Reasoning.png" alt="Perception vs Reasoning decomposition" loading="lazy"
-              style="display:block; width:100%; height:auto;">
-          </figure>
-
-          <p>
-            <strong>Single-Frame vs. Multi-Frame Reasoning.</strong> In several settings, using only the cutpoint frame
-            performs similarly to, or slightly better than, using full visible video. This reveals that many models
-            still fail to exploit temporal continuity and mostly depend on static spatial cues.
+            <strong>Single-Frame vs. Multi-Frame Reasoning.</strong> We evaluate model performance when given only
+            the cutpoint frame versus the visible part, and all four models show a slight improvement over the
+            multi-frame condition when performing single-frame reasoning.
+            This counterintuitive result suggests that temporal cues contribute minimally to model performance under
+            the base spatial causal reasoning task setting, and the observed gains likely stem from static spatial
+            perception rather than genuine temporal understanding.
           </p>
           <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
             <img src="static/images/visible_range3_model3.jpg" alt="Visible range comparison" loading="lazy"
               style="display:block; width:100%; height:auto;">
+            <p class="figure-note">Only cutpoint uses the cutpoint frame as input; Full video provides the entire clip;
+              Ground truth includes only the unseen clips adjacent to the cutpoint.</p>
           </figure>
 
           <p>
-            <strong>Sensitivity to Temporal Causality.</strong> After temporally flipping input videos, accuracy drops
+            <strong>Vision Causal Perception.</strong> After temporally flipping input videos, accuracy drops
             are generally small. The weak sensitivity to temporal inversion further suggests that current models do not
             yet form stable causal direction representations.
           </p>
           <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
             <img src="static/images/CoT_Flip.png" alt="Sensitivity to temporal causality" loading="lazy"
               style="display:block; width:100%; height:auto;">
+            <p class="figure-note">"w/ Flip" reverses the input video temporally; "w/ CoT" applies step-by-step
+              reasoning.</p>
           </figure>
 
           <p>
@@ -1123,9 +1143,9 @@
           </figure>
 
           <p>
-            <strong>Reasoning Strategies (CoT / Self-Think).</strong> Vanilla CoT can help some models, but improvements
-            are not universal. Self-think modes also show mixed effects and may introduce extra reasoning noise.
-            Overall, prompting-level reasoning tricks alone are not sufficient.
+            <strong>Reasoning Strategies (CoT / Self-Think).</strong> Enabling think-mode does not yield consistent
+            improvements; in fact, most models exhibit slight performance degradation, likely due to overextended
+            reasoning chains that introduce noise and divert attention from essential spatial cues.
           </p>
           <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
             <img src="static/images/think_mode3.jpg" alt="Thinking mode comparison" loading="lazy"
@@ -1133,23 +1153,41 @@
           </figure>
 
           <p>
-            <strong>Perception Enhancement.</strong> Adding dense captions or spatial-interaction graphs yields only
-            modest average gains. These methods can help specific categories, but they do not fundamentally resolve
-            causal prediction errors.
+            <strong>Perception Enhancement.</strong> To address the limited perceptual capability of MLLMs, we explore
+            several mechanisms designed to enhance spatial perception: (1) generating dense captions of the input video
+            clip to enrich scene perception, and (2) constructing spatial-interaction graphs via prompts that capture
+            key objects, environmental elements, and their spatial and interaction relations.
+            These perception enhancement strategies lead to only marginal improvements overall, with noticeable gains
+            primarily in specific tasks such as <i>Appearance Order</i> and <i>Relative Speed</i>.
+            The models fail to leverage spatial-interaction graphs for accurate spatial causal reasoning.
+            When using dense captions to enhance input, the models also exhibit limited benefit, suggesting these
+            perception-level augmentations alone are insufficient to substantially boost spatial causal reasoning.
           </p>
           <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
             <img src="static/images/perception_enhancement2.jpg" alt="Perception enhancement strategies" loading="lazy"
               style="display:block; width:100%; height:auto;">
+            <p class="figure-note">PureText uses only the question; Caption w/ V combines dense video captions with the
+              video and question; Caption w/o V uses only captions with the question; SpatialGraph introduces
+              spatial-interaction graph; Original is the baseline.</p>
           </figure>
 
           <p>
-            <strong>Unseen Causal Scaffolds.</strong> Injecting future-oriented auxiliary signals is promising,
-            especially textual causal scaffolds generated by strong LLMs. Compared with image/video scaffolds,
-            text-based guidance is easier for current MLLMs to absorb and often produces more stable improvements.
+            <strong>Unseen Causal Scaffolds.</strong> We further investigate which types of unseen spatial causal
+            scaffolds are able to effectively enhance reasoning performance.
+            Specifically, we evaluate three forms of auxiliary information: textual descriptions generated by GPT-5, the
+            future spatial images produced by FLUX.1-dev-12B, and the future causal videos generated by Wan2.2-TI2V-5B.
+            Incorporating textual future predictions consistently improves performance across all tasks, likely because
+            MLLMs are inherently more adept at processing and reasoning over textual information.
+            In contrast, image- and video-based scaffolds provide limited gains, likely due to input length constraints,
+            modality noise, and the inherent perception limitations of current MLLMs.
+            Nevertheless, videos outperform images in dynamic-related tasks (e.g., Relative Size and Spatial State),
+            benefiting from their richer temporal cues.
           </p>
           <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
             <img src="static/images/future_enhancement2.jpg" alt="Future scaffold enhancement" loading="lazy"
               style="display:block; width:100%; height:auto;">
+            <p class="figure-note">Text provides textual descriptions of future spatial states; Image employs generated
+              future spatial images; Video uses generated future causal videos.</p>
           </figure>
           <div class="key-takeaways">
             <p class="takeaways-title">Key Takeaways</p>
