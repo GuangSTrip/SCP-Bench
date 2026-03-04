@@ -287,7 +287,7 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <!-- TODO: Replace with your paper title -->
-              <h1 class="title is-1 publication-title">Spatial Causal Prediction in Video</h1>
+              <h1 class="title is-1 publication-title">SCP: Spatial Causal Prediction in Video</h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block"><a href="https://scholar.google.com/citations?user=22p-FwoAAAAJ&hl=en"
                     target="_blank">Yanguang Zhao</a><sup>1</sup>,</span>
@@ -350,7 +350,7 @@
                   <!-- TODO: Update with your arXiv paper ID -->
                   <span class="link-block">
                     <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark arxiv-btn">
+                      class="external-link button is-normal is-rounded is-dark custom-link-btn">
                       <span class="icon">
                         <i class="ai ai-arxiv"></i>
                       </span>
@@ -361,7 +361,7 @@
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
+                      class="external-link button is-normal is-rounded is-dark custom-link-btn">
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
@@ -430,22 +430,29 @@
     <!-- Comparison with spatial reasoning benchmarks -->
     <section class="section scp-table-section">
       <div class="container is-max-widescreen">
-        <h2 class="title is-3 has-text-centered" id="comparison-with-spatial-reasoning-benchmarks">Comparison with spatial reasoning benchmarks</h2>
+        <h2 class="title is-3 has-text-centered" id="comparison-with-spatial-reasoning-benchmarks">Comparison with
+          spatial reasoning benchmarks</h2>
         <p class="scp-table-caption">
-          Comparison with existing benchmarks. <code>Modality</code> denotes the input type. <code>Dynamic/Static</code> indicates whether the scene content itself undergoes temporal changes, rather than mere camera movement. <code>View Type</code> specifies whether the questions involve single or multiple viewpoints. <code>Perspective</code> denotes whether the benchmark includes explicitly designed ego (first-person) and exo (third-person) perspective settings. <code>Causal Reasoning</code> indicates whether the benchmark requires inferring outcomes or states driven by causal dependencies. <code>Seen/Unseen</code> reflects whether the queried information is directly observable within the given visual content.
+          Comparison with existing benchmarks. <code>Modality</code> denotes the input type. <code>Dynamic/Static</code>
+          indicates whether the scene content itself undergoes temporal changes, rather than mere camera movement.
+          <code>View Type</code> specifies whether the questions involve single or multiple viewpoints.
+          <code>Perspective</code> denotes whether the benchmark includes explicitly designed ego (first-person) and exo
+          (third-person) perspective settings. <code>Causal Reasoning</code> indicates whether the benchmark requires
+          inferring outcomes or states driven by causal dependencies. <code>Seen/Unseen</code> reflects whether the
+          queried information is directly observable within the given visual content.
         </p>
         <div class="scp-table-wrap">
           <table class="scp-results-table benchmark-compare-table">
             <thead>
               <tr>
                 <th>Benchmark</th>
-                <th>QA pairs</th>
-                <th>Modality</th>
-                <th>Dynamic/Static</th>
+                <th class="col-narrow">QA pairs</th>
+                <th class="col-narrow">Modality</th>
+                <th class="col-wide">Dynamic/Static</th>
                 <th colspan="2">View Type</th>
                 <th colspan="2">Perspective</th>
-                <th>Causal Reasoning</th>
-                <th>Seen/Unseen</th>
+                <th class="col-medium">Causal Reasoning</th>
+                <th class="col-medium">Seen/Unseen</th>
               </tr>
               <tr>
                 <th></th>
@@ -967,30 +974,57 @@
 
     <section class="section">
       <div class="container is-max-widescreen content">
-        <p>
-          <strong>Overall Evaluation Results.</strong> Current MLLMs are still far from human performance on SCP-Bench.
-          GPT-5 achieves the best overall score (66.24), followed by large open-source models such as Qwen3-VL-235B-A22B
-          and InternVL3.5-241B-A28B. Task-wise, relative size is generally easier, while counting, planning, and
-          relation remain the main bottlenecks, indicating weak high-order causal-spatial reasoning.
-        </p>
+        <div class="columns is-desktop is-vcentered">
+          <div class="column content is-7">
+            <p>
+              <strong>Overall Evaluation Results.</strong> Table 2 summarizes the overall performance of MLLMs on
+              SCP-Bench. Current systems remain far below human level, underscoring the substantial gap in spatial
+              causal prediction.
+              GPT-5 attains the highest accuracy (66.24%), followed by Qwen3-VL-235B (61.04%) and InternVL3.5-241B
+              (56.96%).
+              Notably, several open-source models match or surpass proprietary ones on specific tasks, for example,
+              outperforming GPT-5 in <i>Counting</i> and <i>Planning</i> and achieving comparable results in <i>Relative
+                Size</i>, <i>Relative Speed</i>, and <i>Spatial State</i>.
+              At the level of question types, the difficulty landscape becomes clearer.
+              <i>Relative Size</i> is consistently the easiest, whereas <i>Object Relations</i>, <i>Planning</i>, and
+              <i>Counting</i> are the most challenging, as they require more abstract spatial causal reasoning and
+              higher-order object interaction understanding.
+            </p>
+            <p>
+              We further examine performance across perspectives, causal directions, and scenarios (Fig. 6). Models
+              exhibit clear difficulty with multi-view prediction compared to single-view reasoning, indicating limited
+              perspective correspondence. In causal directionality, models perform better when inferring past (backward)
+              events than future (forward) ones, likely because reasoning from known outcomes is easier than
+              anticipating unseen consequences. Finally, model performance remains relatively balanced across different
+              scene categories, with slightly stronger results in driving-related and factory/machine environments.
+            </p>
+          </div>
+          <div class="column is-5">
+            <figure class="image">
+              <img src="static/images/Evaluation_on_SCP-Bench-single-col.jpg"
+                alt="Evaluation across perspectives, causal directions, and scenes" loading="lazy"
+                style="display:block; width:100%; height:auto;">
+            </figure>
+          </div>
+        </div>
 
-        <p>
-          <strong>Temporal Extrapolation Horizon.</strong> We compare short-, medium-, and long-range prediction windows
-          and observe only limited variation across ranges. This suggests current models are not truly benefiting from
-          stronger long-horizon extrapolation, and often rely on local cues rather than robust temporal causal modeling.
-        </p>
-        <div class="figure-grid-two">
-          <figure class="image">
-            <img src="static/images/Evaluation_on_SCP-Bench-single-col.jpg"
-              alt="Evaluation across perspectives, causal directions, and scenes" loading="lazy"
-              style="display:block; width:100%; height:auto;">
-            <p class="figure-note">Fig. Results across perspectives, view directions, and scenes.</p>
-          </figure>
-          <figure class="image">
-            <img src="static/images/time-range2.jpg" alt="Temporal extrapolation horizon analysis" loading="lazy"
-              style="display:block; width:100%; height:auto;">
-            <p class="figure-note">Fig. Temporal extrapolation horizon analysis (short 0–2s, mid 2–5s, long &gt;5s).</p>
-          </figure>
+        <div class="columns is-desktop is-vcentered">
+          <div class="column content is-7">
+            <p>
+              <strong>Temporal Extrapolation Horizon.</strong> We compare short-, medium-, and long-range prediction
+              windows
+              and observe only limited variation across ranges. This suggests current models are not truly benefiting
+              from
+              stronger long-horizon extrapolation, and often rely on local cues rather than robust temporal causal
+              modeling.
+            </p>
+          </div>
+          <div class="column is-5">
+            <figure class="image">
+              <img src="static/images/time-range2.jpg" alt="Temporal extrapolation horizon analysis" loading="lazy"
+                style="display:block; width:100%; height:auto;">
+            </figure>
+          </div>
         </div>
 
         <p>
@@ -1001,8 +1035,6 @@
         <figure class="image" style="max-width: 880px; margin: 0.8rem auto 0.6rem;">
           <img src="static/images/Q4-Case7.jpg" alt="Causal consistency case study" loading="lazy"
             style="display:block; width:100%; height:auto;">
-          <p class="figure-note">Fig. Causal consistency evaluation with rationality, confidence, and evidence-based
-            explanation.</p>
         </figure>
         <div class="key-takeaways">
           <p class="takeaways-title">Key Takeaways</p>
@@ -1027,39 +1059,40 @@
             only textual surrogates are provided, gains are limited and unstable. This implies that better perception
             alone is insufficient without stronger causal inference.
           </p>
-          <!-- Figure/Table Placeholder: perception-reasoning decomposition -->
+          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
+            <img src="static/images/Perception_Reasoning.png" alt="Perception vs Reasoning decomposition" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+          </figure>
 
           <p>
             <strong>Single-Frame vs. Multi-Frame Reasoning.</strong> In several settings, using only the cutpoint frame
             performs similarly to, or slightly better than, using full visible video. This reveals that many models
             still fail to exploit temporal continuity and mostly depend on static spatial cues.
           </p>
+          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
+            <img src="static/images/visible_range3_model3.jpg" alt="Visible range comparison" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+          </figure>
 
           <p>
             <strong>Sensitivity to Temporal Causality.</strong> After temporally flipping input videos, accuracy drops
             are generally small. The weak sensitivity to temporal inversion further suggests that current models do not
             yet form stable causal direction representations.
           </p>
+          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
+            <img src="static/images/CoT_Flip.png" alt="Sensitivity to temporal causality" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+          </figure>
 
           <p>
             <strong>Is Visual Input Necessary?</strong> Yes. Removing video input leads to clear degradation, and dense
             captions only partially compensate. Visual evidence remains essential for spatial causal prediction,
             especially when fine-grained motion and interaction details determine the answer.
           </p>
-          <div class="figure-grid-two">
-            <figure class="image">
-              <img src="static/images/visible_range3_model3.jpg" alt="Visible range comparison" loading="lazy"
-                style="display:block; width:100%; height:auto;">
-              <p class="figure-note">Fig. Visible range comparison: only cutpoint, full video, and ground-truth unseen
-                clip.</p>
-            </figure>
-            <figure class="image">
-              <img src="static/images/visual_no_visual1.jpg" alt="Performance with and without visual input"
-                loading="lazy" style="display:block; width:100%; height:auto;">
-              <p class="figure-note">Fig. Accuracy gap between vision-enabled and vision-disabled settings across tasks.
-              </p>
-            </figure>
-          </div>
+          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
+            <img src="static/images/visual_no_visual1.jpg" alt="Performance with and without visual input"
+              loading="lazy" style="display:block; width:100%; height:auto;">
+          </figure>
           <div class="key-takeaways">
             <p class="takeaways-title">Key Takeaways</p>
             <ul>
@@ -1084,47 +1117,40 @@
             While small-scale increases can be noisy, substantial scale jumps deliver clear improvements, making
             scale-up the most reliable baseline strategy.
           </p>
+          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
+            <img src="static/images/model_size3.jpg" alt="Model scale-up effect" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+          </figure>
 
           <p>
             <strong>Reasoning Strategies (CoT / Self-Think).</strong> Vanilla CoT can help some models, but improvements
             are not universal. Self-think modes also show mixed effects and may introduce extra reasoning noise.
             Overall, prompting-level reasoning tricks alone are not sufficient.
           </p>
-          <div class="figure-grid-two">
-            <figure class="image">
-              <img src="static/images/model_size3.jpg" alt="Model scale-up effect" loading="lazy"
-                style="display:block; width:100%; height:auto;">
-              <p class="figure-note">Fig. Performance comparison across model scales.</p>
-            </figure>
-            <figure class="image">
-              <img src="static/images/think_mode3.jpg" alt="Thinking mode comparison" loading="lazy"
-                style="display:block; width:100%; height:auto;">
-              <p class="figure-note">Fig. Performance with vs. without self-think reasoning.</p>
-            </figure>
-          </div>
+          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
+            <img src="static/images/think_mode3.jpg" alt="Thinking mode comparison" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+          </figure>
 
           <p>
             <strong>Perception Enhancement.</strong> Adding dense captions or spatial-interaction graphs yields only
             modest average gains. These methods can help specific categories, but they do not fundamentally resolve
             causal prediction errors.
           </p>
+          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
+            <img src="static/images/perception_enhancement2.jpg" alt="Perception enhancement strategies" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+          </figure>
+
           <p>
             <strong>Unseen Causal Scaffolds.</strong> Injecting future-oriented auxiliary signals is promising,
             especially textual causal scaffolds generated by strong LLMs. Compared with image/video scaffolds,
             text-based guidance is easier for current MLLMs to absorb and often produces more stable improvements.
           </p>
-          <div class="figure-grid-two">
-            <figure class="image">
-              <img src="static/images/perception_enhancement2.jpg" alt="Perception enhancement strategies"
-                loading="lazy" style="display:block; width:100%; height:auto;">
-              <p class="figure-note">Fig. Comparison of perception enhancement strategies.</p>
-            </figure>
-            <figure class="image">
-              <img src="static/images/future_enhancement2.jpg" alt="Future scaffold enhancement" loading="lazy"
-                style="display:block; width:100%; height:auto;">
-              <p class="figure-note">Fig. Unseen spatial causal scaffolds for enhanced reasoning (text/image/video).</p>
-            </figure>
-          </div>
+          <figure class="image" style="max-width: 550px; margin: 0.5rem auto 1.5rem;">
+            <img src="static/images/future_enhancement2.jpg" alt="Future scaffold enhancement" loading="lazy"
+              style="display:block; width:100%; height:auto;">
+          </figure>
           <div class="key-takeaways">
             <p class="takeaways-title">Key Takeaways</p>
             <ul>
@@ -1142,14 +1168,16 @@
     <section class="section">
       <div class="container is-max-widescreen">
         <h2 class="title is-3 has-text-centered" id="conclusion">Conclusion</h2>
-        <div class="content">
-          <p>
-            We introduce Spatial Causal Prediction (SCP) and SCP-Bench, establishing a new paradigm for predictive
-            spatial reasoning beyond visible scenes. Extensive evaluations indicate that current MLLMs remain far from
-            human-level performance, performing better on past inference than future prediction, and relying mainly on
-            perceptual cues. In-depth controlled analyses show that reasoning, rather than perception, constitutes the
-            major bottleneck. While explicit reasoning and structured spatial representations bring limited gains,
-            notably scaling up and integrating causal scaffolds offer a promising path for better SCP performance.</p>
+        <div class="columns is-centered">
+          <div class="column is-6 content has-text-justified">
+            <p>
+              We introduce Spatial Causal Prediction (SCP) and SCP-Bench, establishing a new paradigm for predictive
+              spatial reasoning beyond visible scenes. Extensive evaluations indicate that current MLLMs remain far from
+              human-level performance, performing better on past inference than future prediction, and relying mainly on
+              perceptual cues. In-depth controlled analyses show that reasoning, rather than perception, constitutes the
+              major bottleneck. While explicit reasoning and structured spatial representations bring limited gains,
+              notably scaling up and integrating causal scaffolds offer a promising path for better SCP performance.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1262,10 +1290,6 @@ End video carousel
                 This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
                   target="_blank">Academic Project Page Template</a> which was adopted from the <a
                   href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-                You are free to borrow the source code of this website, we just ask that you link back to this page in
-                the footer. <br> This website is licensed under a <a rel="license"
-                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-                  Commons Attribution-ShareAlike 4.0 International License</a>.
               </p>
 
             </div>
